@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMÉTIQUES & TECHNOLOGIES DIVA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DIVA</div>
+  <div>
+    <h1>COSMÉTIQUES & TECHNOLOGIES DIVA</h1>
+    <p>Votre beauté. Votre technologie. Votre style.</p>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    🛒 Panier (<span id="cartCount">0</span>)
+  </button>
+</header>
+
+<section class="hero">
+  <h2>Bienvenue chez DIVA</h2>
+  <p>Découvrez nos produits beauté, téléphones, tablettes et accessoires.</p>
+  <a href="#products">Découvrir les produits</a>
+</section>
+
+<section class="search-section">
+  <input
+    type="text"
+    id="search"
+    placeholder="🔎 Rechercher un produit..."
+    oninput="displayProducts()"
+  >
+</section>
+
+<nav class="categories">
+  <button onclick="filterCategory('Tous')">Tous</button>
+  <button onclick="filterCategory('Cosmétiques')">Cosmétiques</button>
+  <button onclick="filterCategory('Téléphones')">Téléphones</button>
+  <button onclick="filterCategory('Tablettes')">Tablettes</button>
+  <button onclick="filterCategory('Accessoires')">Accessoires</button>
+</nav>
+
+<main>
+  <h2 class="section-title">Nos produits</h2>
+
+  <div id="products" class="products"></div>
+</main>
+
+<!-- PANIER -->
+
+<div id="cartModal" class="modal">
+  <div class="cart">
+    <button class="close" onclick="closeCart()">✕</button>
+
+    <h2>Votre panier</h2>
+
+    <div id="cartItems"></div>
+
+    <hr>
+
+    <h3>Total : <span id="cartTotal">0</span> FCFA</h3>
+
+    <button class="whatsapp" onclick="sendOrder()">
+      Commander sur WhatsApp
+    </button>
+  </div>
+</div>
+
+<footer>
+  <h2>COSMÉTIQUES & TECHNOLOGIES DIVA</h2>
+  <p>Votre beauté. Votre technologie. Votre style.</p>
+
+  <p>
+    WhatsApp :
+    <a href="https://wa.me/2250707307811" target="_blank">
+      +225 07 07 30 78 11
+    </a>
+  </p>
+
+  <p>© 2026 DIVA — Tous droits réservés.</p>
+</footer>
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/2250707307811"
+  target="_blank"
+>
+  WhatsApp
+</a>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
